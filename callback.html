@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン完了 | kihon-uploader</title>
+<style>body{font-family:system-ui,-apple-system,"Hiragino Sans",sans-serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.8}code{word-break:break-all;background:#eee;padding:2px 4px}</style>
+</head><body>
+<h1>ログインの結果を Mac に渡しています…</h1>
+<p>自動で切り替わらないときは、このページのアドレス(URL)を丸ごとコピーして、ターミナルに貼り付けてください。</p>
+<script>
+  // 認可コードは、この Mac で待っている social_auth.py にだけ渡す(どこにも保存・送信しない)
+  if (location.search.includes('code=') || location.search.includes('error=')) {
+    location.replace('http://localhost:8765/callback' + location.search);
+  }
+</script>
+</body></html>
